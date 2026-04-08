@@ -1,0 +1,26 @@
+config_version=5
+
+[application]
+
+config/name="2D Project Template"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "blue",
+"res://Common/": "gray",
+"res://Components/": "purple",
+"res://Entities/": "red",
+"res://Global/": "orange",
+"res://Scenes/": "green"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

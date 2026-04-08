@@ -1,0 +1,1 @@
+class_name StaticEntity extends StaticBody2D
