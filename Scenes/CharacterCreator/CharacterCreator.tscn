@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bpichjp3i0uhr"]
+
+[ext_resource type="Script" uid="uid://b1rtjwendyfha" path="res://Scenes/CharacterCreator/CharacterCreator.gd" id="1_u4k08"]
+[ext_resource type="Texture2D" uid="uid://cuxml2qbu4b2r" path="res://Assets/Sprites/Player/IDLE/base_idle_strip9.png" id="3_r6h3w"]
+[ext_resource type="Script" uid="uid://bdgdgo1i0ow6h" path="res://Scenes/CharacterCreator/Hair.gd" id="4_afdho"]
+[ext_resource type="Texture2D" uid="uid://by07shw5kv77x" path="res://Assets/Sprites/Player/IDLE/bowlhair_idle_strip9.png" id="5_4l2r6"]
+[ext_resource type="Texture2D" uid="uid://dimh6skj6e3pa" path="res://Assets/Sprites/Player/IDLE/tools_idle_strip9.png" id="6_u4k08"]
+[ext_resource type="Script" uid="uid://cwqef5qd2o7wr" path="res://Scenes/CharacterCreator/Tool.gd" id="6_vp5cj"]
+
+[node name="CharacterCreator" type="Node2D" unique_id=98084417]
+script = ExtResource("1_u4k08")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=468502065]
+offset_right = 640.0
+offset_bottom = 360.0
+scale = Vector2(0.7199994, 1)
+color = Color(0.4980883, 0.63553584, 0.54681146, 1)
+
+[node name="Skeleton" type="Node2D" parent="." unique_id=272039828]
+position = Vector2(180, 37)
+
+[node name="Body" type="Node2D" parent="Skeleton" unique_id=1716257008]
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton/Body" unique_id=163869936]
+texture = ExtResource("3_r6h3w")
+hframes = 9
+
+[node name="Hair" type="Node2D" parent="Skeleton" unique_id=2118810683]
+script = ExtResource("4_afdho")
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton/Hair" unique_id=143387030]
+texture = ExtResource("5_4l2r6")
+hframes = 9
+
+[node name="Tool" type="Node2D" parent="Skeleton" unique_id=81179773]
+script = ExtResource("6_vp5cj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton/Tool" unique_id=520295367]
+texture = ExtResource("6_u4k08")
+hframes = 9
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=500997622]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=738871757]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -173.0
+offset_right = 112.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
