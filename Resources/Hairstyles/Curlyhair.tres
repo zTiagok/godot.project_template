@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="HairstyleResource" format=3 uid="uid://dw2fnej7qgivi"]
+
+[ext_resource type="Texture2D" uid="uid://gevfredp3v5c" path="res://Assets/Sprites/Characters/Human/ATTACK/curlyhair_attack_strip10.png" id="1_dfbk6"]
+[ext_resource type="Script" uid="uid://cci6lcavfmvqt" path="res://Resources/Hairstyles/Resource.gd" id="1_m12am"]
+[ext_resource type="Texture2D" uid="uid://e3ehav8pfw6b" path="res://Assets/Sprites/Characters/Human/AXE/curlyhair_axe_strip10.png" id="2_5w1ca"]
+[ext_resource type="Texture2D" uid="uid://ba6pq2pvcafg" path="res://Assets/Sprites/Characters/Human/CARRY/curlyhair_carry_strip8.png" id="3_i8lf4"]
+[ext_resource type="Texture2D" uid="uid://dq2h7j5pvblbs" path="res://Assets/Sprites/Characters/Human/CASTING/curlyhair_casting_strip15.png" id="4_14x34"]
+[ext_resource type="Texture2D" uid="uid://defyhixxbru01" path="res://Assets/Sprites/Characters/Human/CAUGHT/curlyhair_caught_strip10.png" id="5_rfc2i"]
+[ext_resource type="Texture2D" uid="uid://eloh0exyu28d" path="res://Assets/Sprites/Characters/Human/DEATH/curlyhair_death_strip13.png" id="6_gshci"]
+[ext_resource type="Texture2D" uid="uid://d4fjlva27acft" path="res://Assets/Sprites/Characters/Human/DIG/curlyhair_dig_strip13.png" id="7_qiow8"]
+[ext_resource type="Texture2D" uid="uid://reqga8u4iyjq" path="res://Assets/Sprites/Characters/Human/DOING/curlyhair_doing_strip8.png" id="8_qb72j"]
+[ext_resource type="Texture2D" uid="uid://1qacnjjltmnf" path="res://Assets/Sprites/Characters/Human/HAMMERING/curlyhair_hamering_strip23.png" id="9_acl4r"]
+[ext_resource type="Texture2D" uid="uid://bucuipye77fik" path="res://Assets/Sprites/Characters/Human/HURT/curlyhair_hurt_strip8.png" id="10_gpwj6"]
+[ext_resource type="Texture2D" uid="uid://fke168hoobm" path="res://Assets/Sprites/Characters/Human/IDLE/curlyhair_idle_strip9.png" id="11_yiinn"]
+[ext_resource type="Texture2D" uid="uid://8sykvda2hwpw" path="res://Assets/Sprites/Characters/Human/JUMP/curlyhair_jump_strip9.png" id="12_7tj23"]
+[ext_resource type="Texture2D" uid="uid://gxcnxmcygbsl" path="res://Assets/Sprites/Characters/Human/MINING/curlyhair_mining_strip10.png" id="13_ys8ob"]
+[ext_resource type="Texture2D" uid="uid://ctnoxw6is7bsv" path="res://Assets/Sprites/Characters/Human/REELING/curlyhair_reeling_strip13.png" id="14_nbjf2"]
+[ext_resource type="Texture2D" uid="uid://bf7fad6h6jnkb" path="res://Assets/Sprites/Characters/Human/ROLL/curlyhair_roll_strip10.png" id="15_87bny"]
+[ext_resource type="Texture2D" uid="uid://jdmaj7vbhnma" path="res://Assets/Sprites/Characters/Human/RUN/curlyhair_run_strip8.png" id="16_0xrwj"]
+[ext_resource type="Texture2D" uid="uid://byyfkoi7wy7o0" path="res://Assets/Sprites/Characters/Human/SWIMMING/curlyhair_swimming_strip12.png" id="18_fsv4c"]
+[ext_resource type="Texture2D" uid="uid://bqaj62kcek0ua" path="res://Assets/Sprites/Characters/Human/WAITING/curlyhair_waiting_strip9.png" id="19_5lfs3"]
+[ext_resource type="Texture2D" uid="uid://ctq12umkdof1s" path="res://Assets/Sprites/Characters/Human/WALKING/curlyhair_walk_strip8.png" id="20_7nxtf"]
+[ext_resource type="Texture2D" uid="uid://dfv1tk4wjgcon" path="res://Assets/Sprites/Characters/Human/WATERING/curlyhair_watering_strip5.png" id="21_slyfi"]
+
+[resource]
+script = ExtResource("1_m12am")
+attack = ExtResource("1_dfbk6")
+axe = ExtResource("2_5w1ca")
+carry = ExtResource("3_i8lf4")
+casting = ExtResource("4_14x34")
+caught = ExtResource("5_rfc2i")
+death = ExtResource("6_gshci")
+dig = ExtResource("7_qiow8")
+doing = ExtResource("8_qb72j")
+hammering = ExtResource("9_acl4r")
+hurt = ExtResource("10_gpwj6")
+idle = ExtResource("11_yiinn")
+jump = ExtResource("12_7tj23")
+mining = ExtResource("13_ys8ob")
+reeling = ExtResource("14_nbjf2")
+roll = ExtResource("15_87bny")
+running = ExtResource("16_0xrwj")
+swimming = ExtResource("18_fsv4c")
+waiting = ExtResource("19_5lfs3")
+walk = ExtResource("20_7nxtf")
+watering = ExtResource("21_slyfi")
+metadata/_custom_type_script = "uid://cci6lcavfmvqt"

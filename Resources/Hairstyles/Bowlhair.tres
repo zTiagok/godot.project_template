@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="HairstyleResource" format=3 uid="uid://cqmsew8m5cxgj"]
+
+[ext_resource type="Texture2D" uid="uid://byddjusnxoe" path="res://Assets/Sprites/Characters/Human/ATTACK/bowlhair_attack_strip10.png" id="1_nk57u"]
+[ext_resource type="Texture2D" uid="uid://bvy7pfl0oauud" path="res://Assets/Sprites/Characters/Human/AXE/bowlhair_axe_strip10.png" id="2_0k8t8"]
+[ext_resource type="Texture2D" uid="uid://d12la13uil2xm" path="res://Assets/Sprites/Characters/Human/CARRY/bowlhair_carry_strip8.png" id="3_1i3u2"]
+[ext_resource type="Texture2D" uid="uid://bb5ncnii5ilqi" path="res://Assets/Sprites/Characters/Human/CASTING/bowlhair_casting_strip15.png" id="4_bxeph"]
+[ext_resource type="Texture2D" uid="uid://c5rmjo3h5n1b4" path="res://Assets/Sprites/Characters/Human/DEATH/bowlhair_death_strip13.png" id="5_o4067"]
+[ext_resource type="Texture2D" uid="uid://b8wmiomp08cb0" path="res://Assets/Sprites/Characters/Human/DIG/bowlhair_dig_strip13.png" id="6_tyqbg"]
+[ext_resource type="Texture2D" uid="uid://b4lwh8umtkpm5" path="res://Assets/Sprites/Characters/Human/DOING/bowlhair_doing_strip8.png" id="7_s7uqf"]
+[ext_resource type="Texture2D" uid="uid://dwte34gxkhld7" path="res://Assets/Sprites/Characters/Human/HAMMERING/bowlhair_hamering_strip23.png" id="8_1g67b"]
+[ext_resource type="Texture2D" uid="uid://cqvi6dw86cbho" path="res://Assets/Sprites/Characters/Human/HURT/bowlhair_hurt_strip8.png" id="9_e8tn2"]
+[ext_resource type="Texture2D" uid="uid://4bwbuaisrvvx" path="res://Assets/Sprites/Characters/Human/IDLE/bowlhair_idle_strip9.png" id="10_qbnug"]
+[ext_resource type="Texture2D" uid="uid://day8cypux15yn" path="res://Assets/Sprites/Characters/Human/JUMP/bowlhair_jump_strip9.png" id="11_uy805"]
+[ext_resource type="Texture2D" uid="uid://b841spnbn1aip" path="res://Assets/Sprites/Characters/Human/MINING/bowlhair_mining_strip10.png" id="12_jhoht"]
+[ext_resource type="Texture2D" uid="uid://0aadmhd3xxr5" path="res://Assets/Sprites/Characters/Human/REELING/bowlhair_reeling_strip13.png" id="13_53lcm"]
+[ext_resource type="Texture2D" uid="uid://5dcldmixgqpn" path="res://Assets/Sprites/Characters/Human/ROLL/bowlhair_roll_strip10.png" id="14_lpnr6"]
+[ext_resource type="Texture2D" uid="uid://d1sk1kbc01hbh" path="res://Assets/Sprites/Characters/Human/RUN/bowlhair_run_strip8.png" id="15_ctfvs"]
+[ext_resource type="Script" uid="uid://cci6lcavfmvqt" path="res://Resources/Hairstyles/Resource.gd" id="16_pqhjf"]
+[ext_resource type="Texture2D" uid="uid://ck4dnskggx254" path="res://Assets/Sprites/Characters/Human/SWIMMING/bowlhair_swimming_strip12.png" id="17_72kd6"]
+[ext_resource type="Texture2D" uid="uid://c07e5kbke53ss" path="res://Assets/Sprites/Characters/Human/WAITING/bowlhair_waiting_strip9.png" id="18_axlq4"]
+[ext_resource type="Texture2D" uid="uid://b3556suujf5kp" path="res://Assets/Sprites/Characters/Human/WALKING/bowlhair_walk_strip8.png" id="19_ataim"]
+[ext_resource type="Texture2D" uid="uid://bwqpfgc1oslta" path="res://Assets/Sprites/Characters/Human/WATERING/bowlhair_watering_strip5.png" id="20_b3ikd"]
+
+[resource]
+script = ExtResource("16_pqhjf")
+attack = ExtResource("1_nk57u")
+axe = ExtResource("2_0k8t8")
+carry = ExtResource("3_1i3u2")
+casting = ExtResource("4_bxeph")
+caught = ExtResource("4_bxeph")
+death = ExtResource("5_o4067")
+dig = ExtResource("6_tyqbg")
+doing = ExtResource("7_s7uqf")
+hammering = ExtResource("8_1g67b")
+hurt = ExtResource("9_e8tn2")
+idle = ExtResource("10_qbnug")
+jump = ExtResource("11_uy805")
+mining = ExtResource("12_jhoht")
+reeling = ExtResource("13_53lcm")
+roll = ExtResource("14_lpnr6")
+running = ExtResource("15_ctfvs")
+swimming = ExtResource("17_72kd6")
+waiting = ExtResource("18_axlq4")
+walk = ExtResource("19_ataim")
+watering = ExtResource("20_b3ikd")
+metadata/_custom_type_script = "uid://cci6lcavfmvqt"

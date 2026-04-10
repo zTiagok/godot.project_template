@@ -6,7 +6,7 @@ var entity : Entity
 
 
 func Enter() -> void:
-	pass
+	entity.changeAnimation()
 
 func Update(_delta) -> void:
 	pass

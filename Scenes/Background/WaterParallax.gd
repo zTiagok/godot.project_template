@@ -12,8 +12,6 @@ func changeVerticalDirection(time: float) -> void:
   # Altera a velocidade do offSet de acordo com o tempo.
   currentVerticalDirection += time * verticalChangeVelocity
 
-  print(currentVerticalDirection)
-
   # Caso o valor antinja o limite máximo ou mínimo, altera o sentido.
   if currentVerticalDirection >= maxVerticalRange or currentVerticalDirection <= minVerticalRange:
     verticalChangeVelocity *= -1
