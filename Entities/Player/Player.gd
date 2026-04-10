@@ -1,11 +1,14 @@
 class_name Player extends Entity
 
-var direction : Vector2
-var lastDirection : Vector2
 
 @export var label : Label
-@export var speed : float = 20.0
+@export var speed : float = 150.0
+@export var deceleration : float = 1200.0
 @export var currentHairstyle : HairstyleResource
+
+var direction : Vector2
+var lastDirection : Vector2
+var currentDeceleration : float = deceleration
 
 @onready var bodySprite : Sprite2D = $Skeleton/Body
 @onready var toolSprite : Sprite2D = $Skeleton/Tool
@@ -20,6 +23,8 @@ func _ready() -> void:
 func _process(_delta):
   direction = GameInputs.getDirections()
   lastDirection = GameInputs.getLastDirection()
+
+  print(self.currentDeceleration)
 
   label.text = stateMachine.currentState.name
   changeSpriteDirection()

@@ -11,6 +11,10 @@ func Update(_delta) -> void:
   if player.direction != Vector2.ZERO:
     stateMachine.ChangeState(PlayerWalkState)
 
+func Exit() -> void:
+  # Reseta a desaceleração.
+  player.currentDeceleration = player.deceleration
+
 func PhysicsUpdate(_delta) -> void:
   # Retira toda a velocidade do player.
-  player.velocity = Vector2.ZERO
+  player.velocity = player.velocity.move_toward(Vector2.ZERO, player.currentDeceleration * _delta)
