@@ -8,7 +8,3 @@ enum HairTypes {
   ShortHair,
   SpikeyHair
 }
-
-enum ToolTypes {
-  None
-}

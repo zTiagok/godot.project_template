@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://b1l3m736i3i27"]
 
 [ext_resource type="Script" uid="uid://bq53t1acimtm5" path="res://Entities/Player/Player.gd" id="1_ww0jn"]
-[ext_resource type="Resource" uid="uid://dw2fnej7qgivi" path="res://Resources/Hairstyles/Curlyhair.tres" id="2_an6q6"]
+[ext_resource type="Resource" uid="uid://cqmsew8m5cxgj" path="res://Resources/Hairstyles/Bowlhair.tres" id="2_hj1c0"]
 [ext_resource type="Script" uid="uid://cthj4j1s63f4g" path="res://Common/StateMachine/StateMachine.gd" id="5_t38ms"]
 [ext_resource type="Script" uid="uid://dltbu2qh76axr" path="res://Entities/Player/States/Idle.gd" id="6_hj1c0"]
 [ext_resource type="Texture2D" uid="uid://clvsu2o2jy2ks" path="res://Assets/Sprites/Characters/Human/WALKING/base_walk_strip8.png" id="6_x44r4"]
 [ext_resource type="Texture2D" uid="uid://wgcey7rnf5do" path="res://Assets/Sprites/Characters/Human/WALKING/tools_walk_strip8.png" id="7_761t5"]
 [ext_resource type="Script" uid="uid://bo32moixbrak8" path="res://Entities/Player/States/Walk.gd" id="7_hj1c0"]
+[ext_resource type="Texture2D" uid="uid://ghleq8b1ttvw" path="res://Assets/Sprites/Characters/Human/AXE/base_axe_strip10.png" id="7_jynvv"]
+[ext_resource type="Script" uid="uid://syccich5v52v" path="res://Entities/Player/States/Chopping.gd" id="7_lmeus"]
+[ext_resource type="Texture2D" uid="uid://ctlnhwooeqyiu" path="res://Assets/Sprites/Characters/Human/AXE/tools_axe_strip10.png" id="8_lmeus"]
+[ext_resource type="PackedScene" uid="uid://8ya1xxiiufu6" path="res://Components/HiboxComponent.tscn" id="11_jynvv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t38ms"]
+font_size = 8
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1des2"]
 load_path = "res://.godot/imported/base_idle_strip9.png-52dc498780ae1f5fe15c1c5e46dace8f.ctex"
@@ -19,6 +24,156 @@ load_path = "res://.godot/imported/tools_idle_strip9.png-f15fd778b37e500bb216be7
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hj1c0"]
 radius = 1.0
 height = 6.0
+
+[sub_resource type="Animation" id="Animation_061yh"]
+resource_name = "Chopping"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_jynvv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton/Body:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton/Body:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999995, 0.49999997, 0.59999996, 0.7, 0.80286115, 0.9006686),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton/Tool:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_lmeus")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton/Tool:hframes")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton/Tool:vframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton/Tool:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8017762, 0.89928085),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton/Hair:hframes")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton/Hair:vframes")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton/Hair:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("StateMachine/Chopping")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onAnimationEnd"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_hj1c0"]
 resource_name = "Idle"
@@ -431,25 +586,30 @@ tracks/10/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_761t5"]
 _data = {
+&"Chopping": SubResource("Animation_061yh"),
 &"Idle": SubResource("Animation_hj1c0"),
 &"RESET": SubResource("Animation_x44r4"),
 &"Walk": SubResource("Animation_hacra")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=2138131949 node_paths=PackedStringArray("label")]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmeus"]
+radius = 8.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2138131949]
 collision_mask = 6
 script = ExtResource("1_ww0jn")
-label = NodePath("Skeleton/Name")
-currentHairstyle = ExtResource("2_an6q6")
+currentHairstyle = ExtResource("2_hj1c0")
+currentTool = 1
 
 [node name="Skeleton" type="Node2D" parent="." unique_id=810089891]
 
-[node name="Name" type="Label" parent="Skeleton" unique_id=756566615]
+[node name="State" type="Label" parent="Skeleton" unique_id=756566615]
 offset_left = -23.0
-offset_top = -35.0
+offset_top = -24.0
 offset_right = 24.0
-offset_bottom = -12.0
-text = "Name"
+offset_bottom = -1.0
+text = "State"
 label_settings = SubResource("LabelSettings_t38ms")
 horizontal_alignment = 1
 
@@ -474,6 +634,9 @@ script = ExtResource("6_hj1c0")
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1537906431]
 script = ExtResource("7_hj1c0")
 
+[node name="Chopping" type="Node" parent="StateMachine" unique_id=1140874102]
+script = ExtResource("7_lmeus")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2131650952]
 position = Vector2(0, 6)
 rotation = 1.5707964
@@ -485,3 +648,12 @@ autoplay = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2053485727]
 zoom = Vector2(1.5, 1.5)
+
+[node name="HitboxComponent" parent="." unique_id=1540488901 instance=ExtResource("11_jynvv")]
+rotation = 3.1415927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=931779311]
+position = Vector2(14, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_lmeus")
+debug_color = Color(0.9985537, 0, 0.16248178, 0.27058825)

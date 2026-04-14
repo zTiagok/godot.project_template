@@ -11,6 +11,9 @@ func Update(_delta) -> void:
   if player.direction != Vector2.ZERO:
     stateMachine.ChangeState(PlayerWalkState)
 
+  if player.currentTool == DataTypes.ToolTypes.Axe && GameInputs.isUsingTool():
+    stateMachine.ChangeState(PlayerChoppingState)
+
 func Exit() -> void:
   # Reseta a desaceleração.
   player.currentDeceleration = player.deceleration

@@ -6,6 +6,7 @@ func Enter() -> void:
   super()
   player = entity
 
+
 func Update(_delta) -> void:
   if player.direction == Vector2.ZERO:
     stateMachine.ChangeState(PlayerIdleState)

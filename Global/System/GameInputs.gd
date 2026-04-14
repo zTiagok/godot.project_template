@@ -14,3 +14,6 @@ static func getLastDirection() -> Vector2:
     lastDirection = direction
 
   return lastDirection 
+
+static func isUsingTool() -> bool:
+  return Input.is_action_pressed("UseTool")

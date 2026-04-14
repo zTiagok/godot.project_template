@@ -3,14 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://b1l3m736i3i27" path="res://Entities/Player/Player.tscn" id="1_b5ayd"]
 [ext_resource type="TileSet" uid="uid://dvcwxtplqbayy" path="res://Scenes/Tilesets/GameTilemap.tres" id="2_5lt6y"]
 [ext_resource type="Script" uid="uid://ded7gyd050fnn" path="res://Scenes/Background/WaterParallax.gd" id="2_8k7wh"]
-[ext_resource type="Resource" uid="uid://cqmsew8m5cxgj" path="res://Resources/Hairstyles/Bowlhair.tres" id="2_iufkg"]
 
 [node name="TestScene" type="Node2D" unique_id=196449346]
 
 [node name="Player" parent="." unique_id=2138131949 instance=ExtResource("1_b5ayd")]
 z_index = 1
 position = Vector2(470, 226)
-currentHairstyle = ExtResource("2_iufkg")
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=611819891]
 
