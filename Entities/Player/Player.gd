@@ -3,7 +3,7 @@ class_name Player extends Entity
 @export var speed : float = 150.0
 @export var deceleration : float = 1200.0
 @export var currentHairstyle : HairstyleResource
-@export var currentTool : DataTypes.ToolTypes = DataTypes.ToolTypes.None 
+@export var currentTool : DataTypes.ToolTypes
 
 var direction : Vector2
 var lastDirection : Vector2
@@ -18,12 +18,13 @@ var canChangeDirection : bool = true
 func _ready() -> void:
   # Inicia o cabelo do Player.
   hairSprite.texture = currentHairstyle.idle
+  hitbox.collision.disabled = true
 
 
 func _process(_delta):
   direction = GameInputs.getDirections()
   lastDirection = GameInputs.getLastDirection()
-
+  
   stateLabel.text = stateMachine.currentState.name
   changeSpriteDirection()
   changeHitboxDirection()

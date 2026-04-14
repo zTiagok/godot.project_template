@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bmrymhfd2ipbi" path="res://Assets/Sprites/Tileset/Tilemap.png" id="1_26set"]
 [ext_resource type="Texture2D" uid="uid://dpsvvutj70nnj" path="res://Assets/Sprites/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_t8gw2"]
+[ext_resource type="PackedScene" uid="uid://dbfijdv2vxtqh" path="res://Entities/Objects/Rock.tscn" id="3_t8gw2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i88uv"]
 texture = ExtResource("1_26set")
@@ -865,6 +866,10 @@ texture = ExtResource("2_t8gw2")
 11:20/0 = 0
 12:20/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_i88uv"]
+resource_name = "Objects"
+scenes/1/scene = ExtResource("3_t8gw2")
+
 [resource]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 27
@@ -875,3 +880,4 @@ terrain_set_0/terrain_1/name = "Tilled Dirt"
 terrain_set_0/terrain_1/color = Color(0.5019608, 0.8352941, 0.2509804, 1)
 sources/0 = SubResource("TileSetAtlasSource_i88uv")
 sources/1 = SubResource("TileSetAtlasSource_31uu1")
+sources/2 = SubResource("TileSetScenesCollectionSource_i88uv")

@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ghleq8b1ttvw" path="res://Assets/Sprites/Characters/Human/AXE/base_axe_strip10.png" id="7_jynvv"]
 [ext_resource type="Script" uid="uid://syccich5v52v" path="res://Entities/Player/States/Chopping.gd" id="7_lmeus"]
 [ext_resource type="Texture2D" uid="uid://ctlnhwooeqyiu" path="res://Assets/Sprites/Characters/Human/AXE/tools_axe_strip10.png" id="8_lmeus"]
-[ext_resource type="PackedScene" uid="uid://8ya1xxiiufu6" path="res://Components/HiboxComponent.tscn" id="11_jynvv"]
+[ext_resource type="PackedScene" uid="uid://8ya1xxiiufu6" path="res://Components/HitboxComponent.tscn" id="11_jynvv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t38ms"]
 font_size = 8
@@ -167,9 +167,12 @@ tracks/11/path = NodePath("StateMachine/Chopping")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.6, 1),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"onAnimation"
+}, {
 "args": [],
 "method": &"onAnimationEnd"
 }]
@@ -650,7 +653,6 @@ autoplay = &"Idle"
 zoom = Vector2(1.5, 1.5)
 
 [node name="HitboxComponent" parent="." unique_id=1540488901 instance=ExtResource("11_jynvv")]
-rotation = 3.1415927
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=931779311]
 position = Vector2(14, 0)

@@ -30,3 +30,7 @@ tile_set = ExtResource("2_5lt6y")
 
 [node name="TilledDirt" type="TileMapLayer" parent="Tilemap" unique_id=940896905]
 tile_set = ExtResource("2_5lt6y")
+
+[node name="Rocks" type="TileMapLayer" parent="Tilemap" unique_id=348266352]
+tile_map_data = PackedByteArray("AAAVABAAAgAAAAAAAQAcABAAAgAAAAAAAQA=")
+tile_set = ExtResource("2_5lt6y")
