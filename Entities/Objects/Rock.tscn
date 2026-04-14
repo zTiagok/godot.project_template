@@ -2,8 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://dpsvvutj70nnj" path="res://Assets/Sprites/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_qr5xy"]
 [ext_resource type="Script" uid="uid://u0njt2st2irv" path="res://Entities/Objects/Rock.gd" id="1_r7dec"]
+[ext_resource type="Script" uid="uid://dnk2vwq5b2yys" path="res://Resources/Collectables/Collectable.gd" id="2_13y5d"]
+[ext_resource type="PackedScene" uid="uid://bid5r5pjsagd5" path="res://Entities/Collectables/Stone.tscn" id="3_mi8t1"]
 [ext_resource type="PackedScene" uid="uid://dovjpnngoiert" path="res://Components/HurtboxComponent.tscn" id="3_scsg0"]
 [ext_resource type="PackedScene" uid="uid://c4ya0138pbn0r" path="res://Components/StatsComponent.tscn" id="4_i0t0w"]
+
+[sub_resource type="Resource" id="Resource_haqbx"]
+script = ExtResource("2_13y5d")
+scene = ExtResource("3_mi8t1")
+maxQuantity = 4
+metadata/_custom_type_script = "uid://dnk2vwq5b2yys"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7dec"]
 atlas = ExtResource("1_qr5xy")
@@ -20,6 +28,7 @@ radius = 9.0
 collision_layer = 4
 collision_mask = 27
 script = ExtResource("1_r7dec")
+dropList = Array[ExtResource("2_13y5d")]([SubResource("Resource_haqbx")])
 neededTool = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1106099045]

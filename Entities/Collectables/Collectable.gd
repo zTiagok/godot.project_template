@@ -4,37 +4,63 @@ class_name Collectable extends CharacterBody2D
 
 @onready var collectableComponent : CollectableComponent = $CollectableComponent
 @onready var stuckTimer : Timer = $Timer
+@onready var animation : AnimationPlayer = $AnimationPlayer
 
+@export_group("On Spawn")
+@export var minDistance : float = 10.0
+@export var maxDistance : float = 30.0
+@export var deceleration : float = 20.0
+
+@export_group("On Following")
 @export var movementSpeed : float = 20.0
 @export var incrementalSpeed : float = 80.0
 
 var canBeCollected : bool = false
 var player: Player
 var lastPosition : Vector2
+var spawnDirection : Vector2
+var spawnAngle : float
 
 func _ready():
   collision_layer = LayerTypes.COLLECTABLES
   collision_mask = LayerTypes.WORLD | LayerTypes.INTERACTABLES
-  stuckTimer.stop()
 
   collectableComponent.signalCanBeCollected.connect(onCollectionEnabled)
   collectableComponent.signalOnCollected.connect(onCollected)
+
+  movementOnSpawn()
+  animation.seek(randf() * animation.current_animation_length, true)
 
 
 func _physics_process(_delta):
   lastPosition = global_position
 
-  print(stuckTimer.time_left)
-
   # Quando habilitar a coleta, irá se mover em direção ao Player.
   if canBeCollected:
     moveTowardsPlayer(_delta)
+  else:
+    # Caso não, ele irá desacelerar até parar.
+    velocity = velocity.move_toward(Vector2.ZERO, deceleration * _delta)
 
   move_and_slide()
 
   # Depois de calcular a física com o "move_and_slide", verifica a posição e vê
   # se está preso.
   checkIfStuck()
+
+
+func movementOnSpawn() -> void:
+  # Escolhe um ângulo aleatório dentro dos 360 graus.
+  spawnAngle = randf() * TAU
+
+  # Escolhe uma direção dentro desse ângulo.
+  spawnDirection = Vector2.RIGHT.rotated(spawnAngle)
+
+  # Escolhe uma velocidade em base a distância mínima e máxima selecionada.
+  var spawnForce = randf_range(minDistance, maxDistance)
+
+  # Aplica a velocity para esta direção.
+  velocity = spawnDirection * spawnForce
 
 
 func moveTowardsPlayer(time: float) -> void:

@@ -7,6 +7,44 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3m0na"]
 radius = 8.062258
 
+[sub_resource type="Animation" id="Animation_3m0na"]
+resource_name = "Default"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_jq7kw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1l04"]
+_data = {
+&"Default": SubResource("Animation_3m0na"),
+&"RESET": SubResource("Animation_jq7kw")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfcdu"]
 atlas = ExtResource("1_xljnm")
 region = Rect2(880, 480, 16, 16)
@@ -15,17 +53,22 @@ region = Rect2(880, 480, 16, 16)
 collision_layer = 8
 collision_mask = 20
 script = ExtResource("1_3m0na")
+minDistance = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527236341]
 shape = SubResource("CircleShape2D_3m0na")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188112330]
-texture = SubResource("AtlasTexture_hfcdu")
 
 [node name="CollectableComponent" parent="." unique_id=936300750 instance=ExtResource("3_3m0na")]
 
 [node name="Timer" type="Timer" parent="." unique_id=1804665946]
 wait_time = 1.5
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1430304452]
+libraries/ = SubResource("AnimationLibrary_t1l04")
+autoplay = &"Default"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188112330]
+texture = SubResource("AtlasTexture_hfcdu")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

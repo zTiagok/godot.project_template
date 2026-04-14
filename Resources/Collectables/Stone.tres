@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CollectableResource" format=3 uid="uid://btesktimgy01"]
+
+[ext_resource type="Script" uid="uid://dnk2vwq5b2yys" path="res://Resources/Collectables/Collectable.gd" id="1_0uksk"]
+[ext_resource type="PackedScene" uid="uid://bid5r5pjsagd5" path="res://Entities/Collectables/Stone.tscn" id="1_rwwpi"]
+
+[resource]
+script = ExtResource("1_0uksk")
+scene = ExtResource("1_rwwpi")
+metadata/_custom_type_script = "uid://dnk2vwq5b2yys"
