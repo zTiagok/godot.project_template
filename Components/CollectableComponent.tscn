@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://swoq4hb35bqj" path="res://Components/CollectableComponent.gd" id="1_ns6by"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bh37i"]
-radius = 32.06244
+radius = 57.07889
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ns6by"]
 radius = 7.071068

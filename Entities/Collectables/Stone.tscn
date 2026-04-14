@@ -23,3 +23,9 @@ shape = SubResource("CircleShape2D_3m0na")
 texture = SubResource("AtlasTexture_hfcdu")
 
 [node name="CollectableComponent" parent="." unique_id=936300750 instance=ExtResource("3_3m0na")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1804665946]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
