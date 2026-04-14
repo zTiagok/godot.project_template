@@ -16,7 +16,7 @@ func Update(_delta) -> void:
 
 func PhysicsUpdate(_delta) -> void:
   # Movimenta o Player com base na direção escolhida.
-  player.velocity = player.speed * player.direction.normalized()
+  player.velocity = player.stats.moveSpeed * player.direction.normalized()
 
 
 func increaseDeceleration(time) -> void:

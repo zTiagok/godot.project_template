@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://syccich5v52v" path="res://Entities/Player/States/Chopping.gd" id="7_lmeus"]
 [ext_resource type="Texture2D" uid="uid://ctlnhwooeqyiu" path="res://Assets/Sprites/Characters/Human/AXE/tools_axe_strip10.png" id="8_lmeus"]
 [ext_resource type="PackedScene" uid="uid://8ya1xxiiufu6" path="res://Components/HitboxComponent.tscn" id="11_jynvv"]
+[ext_resource type="PackedScene" uid="uid://c4ya0138pbn0r" path="res://Components/StatsComponent.tscn" id="12_lmeus"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t38ms"]
 font_size = 8
@@ -659,3 +660,5 @@ position = Vector2(14, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_lmeus")
 debug_color = Color(0.9985537, 0, 0.16248178, 0.27058825)
+
+[node name="StatsComponent" parent="." unique_id=1809305169 instance=ExtResource("12_lmeus")]

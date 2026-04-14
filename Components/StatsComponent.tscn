@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://c4ya0138pbn0r"]
 
-[sub_resource type="GDScript" id="GDScript_yqlsn"]
-script/source = "extends Node
-"
+[ext_resource type="Script" uid="uid://pkcadin3n4a7" path="res://Components/StatsComponent.gd" id="1_w6x7p"]
 
 [node name="StatsComponent" type="Node" unique_id=1809305169]
-script = SubResource("GDScript_yqlsn")
+script = ExtResource("1_w6x7p")

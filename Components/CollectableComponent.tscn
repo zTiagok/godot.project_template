@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bkymx32kqgcto"]
+
+[ext_resource type="Script" uid="uid://swoq4hb35bqj" path="res://Components/CollectableComponent.gd" id="1_ns6by"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bh37i"]
+radius = 32.06244
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ns6by"]
+radius = 7.071068
+
+[node name="CollectableComponent" type="Area2D" unique_id=936300750]
+collision_layer = 8
+script = ExtResource("1_ns6by")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164784499]
+shape = SubResource("CircleShape2D_bh37i")
+debug_color = Color(0, 0.6509804, 0.13333334, 0.27058825)
+
+[node name="CollectionRadius" type="Area2D" parent="." unique_id=580013896]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionRadius" unique_id=329482157]
+shape = SubResource("CircleShape2D_ns6by")
+debug_color = Color(0.46180594, 0.59435725, 0, 0.5764706)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="CollectionRadius" to="." method="_on_collection_radius_body_entered"]

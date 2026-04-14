@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpsvvutj70nnj" path="res://Assets/Sprites/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_qr5xy"]
 [ext_resource type="Script" uid="uid://u0njt2st2irv" path="res://Entities/Objects/Rock.gd" id="1_r7dec"]
 [ext_resource type="PackedScene" uid="uid://dovjpnngoiert" path="res://Components/HurtboxComponent.tscn" id="3_scsg0"]
+[ext_resource type="PackedScene" uid="uid://c4ya0138pbn0r" path="res://Components/StatsComponent.tscn" id="4_i0t0w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7dec"]
 atlas = ExtResource("1_qr5xy")
@@ -36,3 +37,8 @@ shape = SubResource("CapsuleShape2D_scsg0")
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_i0t0w")
 debug_color = Color(0.78780675, 0.4321914, 5.7756904e-07, 0.27058825)
+
+[node name="StatsComponent" parent="." unique_id=1809305169 instance=ExtResource("4_i0t0w")]
+maxHealth = 5.0
+moveSpeed = 0.0
+damage = 0.0

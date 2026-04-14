@@ -1,6 +1,5 @@
 class_name Player extends Entity
 
-@export var speed : float = 150.0
 @export var deceleration : float = 1200.0
 @export var currentHairstyle : HairstyleResource
 @export var currentTool : DataTypes.ToolTypes
