@@ -11,8 +11,15 @@ func Update(_delta) -> void:
   if player.direction != Vector2.ZERO:
     stateMachine.ChangeState(PlayerWalkState)
 
-  if player.currentTool == DataTypes.ToolTypes.Axe && GameInputs.isUsingTool():
-    stateMachine.ChangeState(PlayerChoppingState)
+  # Ao apertar o botão de utilização da ferramenta, troca para o state equivalente
+  # à ferramenta equipada.
+  if GameInputs.isUsingTool():
+    match(player.currentTool):
+      DataTypes.ToolTypes.Axe:
+        stateMachine.ChangeState(PlayerChoppingState)
+
+      DataTypes.ToolTypes.Pickaxe:
+        stateMachine.ChangeState(PlayerMiningState)
 
 func Exit() -> void:
   # Reseta a desaceleração.

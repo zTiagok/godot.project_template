@@ -50,6 +50,10 @@ func changeAnimation() -> void:
         hairSprite.texture = currentHairstyle.axe
         animation.play("Chopping")
 
+      PlayerMiningState:
+        hairSprite.texture = currentHairstyle.mining
+        animation.play("Mining")
+
 
 func changeSpriteDirection() -> void:
   # Caso a direção X do Player seja esquerda ou direita.

@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dpsvvutj70nnj" path="res://Assets/Sprites/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_xljnm"]
 [ext_resource type="PackedScene" uid="uid://bkymx32kqgcto" path="res://Components/CollectableComponent.tscn" id="3_3m0na"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3m0na"]
-radius = 8.062258
-
 [sub_resource type="Animation" id="Animation_3m0na"]
 resource_name = "Default"
 length = 2.0
@@ -49,14 +46,14 @@ _data = {
 atlas = ExtResource("1_xljnm")
 region = Rect2(880, 480, 16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3m0na"]
+radius = 4.0
+
 [node name="Stone" type="CharacterBody2D" unique_id=385402402]
 collision_layer = 8
 collision_mask = 20
 script = ExtResource("1_3m0na")
 minDistance = 15.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527236341]
-shape = SubResource("CircleShape2D_3m0na")
 
 [node name="CollectableComponent" parent="." unique_id=936300750 instance=ExtResource("3_3m0na")]
 
@@ -70,5 +67,8 @@ autoplay = &"Default"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188112330]
 texture = SubResource("AtlasTexture_hfcdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527236341]
+shape = SubResource("CircleShape2D_3m0na")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

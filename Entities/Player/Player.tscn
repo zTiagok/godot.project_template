@@ -9,7 +9,9 @@
 [ext_resource type="Script" uid="uid://bo32moixbrak8" path="res://Entities/Player/States/Walk.gd" id="7_hj1c0"]
 [ext_resource type="Texture2D" uid="uid://ghleq8b1ttvw" path="res://Assets/Sprites/Characters/Human/AXE/base_axe_strip10.png" id="7_jynvv"]
 [ext_resource type="Script" uid="uid://syccich5v52v" path="res://Entities/Player/States/Chopping.gd" id="7_lmeus"]
+[ext_resource type="Script" uid="uid://c2uu2raexvghj" path="res://Entities/Player/States/Mining.gd" id="7_uw7o4"]
 [ext_resource type="Texture2D" uid="uid://ctlnhwooeqyiu" path="res://Assets/Sprites/Characters/Human/AXE/tools_axe_strip10.png" id="8_lmeus"]
+[ext_resource type="Texture2D" uid="uid://bgxnlrhwwg3un" path="res://Assets/Sprites/Characters/Human/MINING/tools_mining_strip10.png" id="9_061yh"]
 [ext_resource type="PackedScene" uid="uid://8ya1xxiiufu6" path="res://Components/HitboxComponent.tscn" id="11_jynvv"]
 [ext_resource type="PackedScene" uid="uid://c4ya0138pbn0r" path="res://Components/StatsComponent.tscn" id="12_lmeus"]
 
@@ -316,6 +318,159 @@ tracks/10/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 
+[sub_resource type="Animation" id="Animation_uw7o4"]
+resource_name = "Mining"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_jynvv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton/Body:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton/Body:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999995, 0.49999997, 0.59999996, 0.7, 0.80286115, 0.9006686),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton/Tool:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_061yh")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton/Tool:hframes")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton/Tool:vframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton/Tool:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8017762, 0.89928085),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton/Hair:hframes")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton/Hair:vframes")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton/Hair:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("StateMachine/Mining")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"onAnimation"
+}, {
+"args": [],
+"method": &"onAnimationEnd"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_x44r4"]
 length = 0.001
 tracks/0/type = "value"
@@ -592,6 +747,7 @@ tracks/10/keys = {
 _data = {
 &"Chopping": SubResource("Animation_061yh"),
 &"Idle": SubResource("Animation_hj1c0"),
+&"Mining": SubResource("Animation_uw7o4"),
 &"RESET": SubResource("Animation_x44r4"),
 &"Walk": SubResource("Animation_hacra")
 }
@@ -604,7 +760,7 @@ height = 28.0
 collision_mask = 6
 script = ExtResource("1_ww0jn")
 currentHairstyle = ExtResource("2_hj1c0")
-currentTool = 1
+currentTool = 2
 
 [node name="Skeleton" type="Node2D" parent="." unique_id=810089891]
 
@@ -640,6 +796,9 @@ script = ExtResource("7_hj1c0")
 
 [node name="Chopping" type="Node" parent="StateMachine" unique_id=1140874102]
 script = ExtResource("7_lmeus")
+
+[node name="Mining" type="Node" parent="StateMachine" unique_id=1139765985]
+script = ExtResource("7_uw7o4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2131650952]
 position = Vector2(0, 6)

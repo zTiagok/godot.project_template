@@ -11,6 +11,7 @@ radius = 7.071068
 [node name="CollectableComponent" type="Area2D" unique_id=936300750]
 collision_layer = 8
 script = ExtResource("1_ns6by")
+collectionTimer = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164784499]
 shape = SubResource("CircleShape2D_bh37i")

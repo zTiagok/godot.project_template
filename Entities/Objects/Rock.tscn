@@ -29,7 +29,7 @@ collision_layer = 4
 collision_mask = 27
 script = ExtResource("1_r7dec")
 dropList = Array[ExtResource("2_13y5d")]([SubResource("Resource_haqbx")])
-neededTool = 1
+neededTool = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1106099045]
 position = Vector2(0, -11)
